@@ -10,9 +10,24 @@ $(document).ready(function() {
     $(".menu-icon").show();
     $(".close-icon").hide();
   });
-  // $('#workHover').hover(
-  //   function(){
-  //     $('.showing').
-  //   }
-  // )
+  function checkWindowSize() {
+    var $window = $(window);
+    var windowWidth = $window.width();
+    if (windowWidth >= 769) {
+      $("#workHover").hover(
+        function() {
+          $("#aboutHover").hide();
+          $("#programHover").hide();
+          $("#registerHover").hide();
+          $("#contactHover").hide();
+        },
+        function() {
+          $("#aboutHover").show();
+          $("#programHover").show();
+          $("#registerHover").show();
+          $("#contactHover").show();
+        }
+      );
+    }
+  }
 });
