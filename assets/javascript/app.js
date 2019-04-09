@@ -30,4 +30,15 @@ $(document).ready(function() {
       );
     }
   }
+
+  var navScrollPos = $("nav").offset().top;
+  $(window).on("scroll", function() {
+    var navScrollTop = $(window).scrollTop();
+    $("#scrollStatus").html(navScrollTop);
+    if (navScrollTop >= navScrollPos) {
+      $("nav").addClass("stickyNav");
+    } else {
+      $("nav").removeClass(".stickyNav");
+    }
+  });
 });

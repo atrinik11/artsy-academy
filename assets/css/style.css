@@ -25,7 +25,7 @@ body {
   background-color: rgb(47, 0, 255);
   /* background-image: url("../images/nature.jpg"); */
   background-size: cover;
-  background-position: center center;
+  /* background-position: center center; */
   position: relative;
   top: 0;
   bottom: 0;
@@ -125,6 +125,7 @@ nav li ul li a {
   background-color: white;
   color: rgb(204, 10, 243);
 }
+
 @media (min-width: 700px) {
   #artsy-image {
     height: 300px;
@@ -183,8 +184,14 @@ nav li ul li a {
     height: 500px;
   }
   #artsy-overlay h1 {
+    margin-top: 100px;
     margin-left: 50px;
     font-size: 230px;
+  }
+  .stickyNav {
+    position: fixed;
+    top: 0;
+    background-color: rgb(204, 10, 243);
   }
   nav {
     height: 60px;
@@ -227,9 +234,10 @@ nav li ul li a {
     background-color: rgb(204, 10, 243);
   }
   nav li ul li {
-    display: none;
-    margin-top: -7px;
-    background-color: rgb(204, 10, 243);
+    /* display: none; */
+    width: 70%;
+    margin-top: -3px;
+    margin-left: 60px;
   }
   nav li:hover ul li {
     display: block;
