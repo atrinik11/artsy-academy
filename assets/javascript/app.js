@@ -1,5 +1,6 @@
 $(document).ready(function() {
   console.log("Document loaded");
+  //   checkWindowSize();
   $(".menu-icon").on("click", function() {
     $(".menu-1").toggleClass("showing");
     $(".close-icon").show();
@@ -13,32 +14,23 @@ $(document).ready(function() {
   function checkWindowSize() {
     var $window = $(window);
     var windowWidth = $window.width();
-    if (windowWidth >= 769) {
-      $("#workHover").hover(
-        function() {
-          $("#aboutHover").hide();
-          $("#programHover").hide();
-          $("#registerHover").hide();
-          $("#contactHover").hide();
-        },
-        function() {
-          $("#aboutHover").show();
-          $("#programHover").show();
-          $("#registerHover").show();
-          $("#contactHover").show();
-        }
-      );
-    }
   }
 
+  //   Sticky Nav codes here
   var navScrollPos = $("nav").offset().top;
+
+  $("nav").wrap('<div class="navPlaceholder"></div>');
+  $(".navPlaceholder").height($("nav").outerHeight());
+
   $(window).on("scroll", function() {
     var navScrollTop = $(window).scrollTop();
     $("#scrollStatus").html(navScrollTop);
     if (navScrollTop >= navScrollPos) {
       $("nav").addClass("stickyNav");
+      $(".logo").show();
     } else {
-      $("nav").removeClass(".stickyNav");
+      $("nav").removeClass("stickyNav");
+      $(".logo").hide();
     }
   });
 });
