@@ -206,6 +206,9 @@ nav li ul li a {
     width: 100%;
     box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.5);
   }
+  .stickyNav ul {
+    margin-left: -70px;
+  }
   .stickyNav ul li {
     width: 300px;
   }
