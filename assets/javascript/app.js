@@ -18,7 +18,6 @@ $(document).ready(function() {
 
   //   Sticky Nav codes here
   var navScrollPos = $("nav").offset().top;
-
   $("nav").wrap('<div class="navPlaceholder"></div>');
   $(".navPlaceholder").height($("nav").outerHeight());
 
@@ -33,4 +32,9 @@ $(document).ready(function() {
       $(".logo").hide();
     }
   });
+
+  //Dynamically assign name to sticky nav bar
+  var logo = $(".logo");
+  var logoName = "<h3>Artsy Academy</h3>";
+  logo.append(logoName);
 });
